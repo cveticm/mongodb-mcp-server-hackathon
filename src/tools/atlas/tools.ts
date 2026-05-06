@@ -3,7 +3,7 @@ export { ListProjectsTool } from "./read/listProjects.js";
 export { InspectClusterTool } from "./read/inspectCluster.js";
 export { CreateFreeClusterTool } from "./create/createFreeCluster.js";
 export { CreateDedicatedClusterTool } from "./create/createDedicatedCluster.js";
-export { UpdateClusterTool } from "./update/updateCluster.js";
+export { UpdateDedicatedClusterTool } from "./update/updateDedicatedCluster.js";
 export { CreateAccessListTool } from "./create/createAccessList.js";
 export { InspectAccessListTool } from "./read/inspectAccessList.js";
 export { ListDBUsersTool } from "./read/listDBUsers.js";

@@ -5,8 +5,8 @@ import type { ClusterDescription20240805 } from "../../../common/atlas/openapi.j
 import { AtlasArgs } from "../../args.js";
 import { z } from "zod";
 
-export class UpdateClusterTool extends AtlasToolBase {
-    static toolName = "atlas-update-cluster";
+export class UpdateDedicatedClusterTool extends AtlasToolBase {
+    static toolName = "atlas-update-dedicated-cluster";
     public description =
         "Update an existing dedicated MongoDB Atlas cluster. Use this to scale the instance tier, pause or resume the cluster, upgrade the MongoDB major version, or enable/disable backup.";
     static operationType: OperationType = "update";
