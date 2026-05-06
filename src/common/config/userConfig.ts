@@ -81,6 +81,8 @@ const ServerConfigSchema = z.object({
         .default([
             "atlas-create-access-list",
             "atlas-create-db-user",
+            "atlas-create-dedicated-cluster",
+            "atlas-update-cluster",
             "drop-database",
             "drop-collection",
             "delete-many",

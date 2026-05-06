@@ -342,6 +342,22 @@ export class ApiClient {
         return data;
     }
 
+    async updateCluster(
+        groupId: string,
+        clusterName: string,
+        body: Partial<components["schemas"]["ClusterDescription20240805"]>
+    ): Promise<components["schemas"]["ClusterDescription20240805"]> {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        const { data, error, response } = await (this.client.PATCH as any)(
+            "/api/atlas/v2/groups/{groupId}/clusters/{clusterName}",
+            { params: { path: { groupId, clusterName } }, body }
+        );
+        if (error) {
+            throw ApiClientError.fromError(response, error);
+        }
+        return data as components["schemas"]["ClusterDescription20240805"];
+    }
+
     // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
     async deleteCluster(options: FetchOptions<operations["deleteGroupCluster"]>) {
         const { error, response } = await this.client.DELETE(

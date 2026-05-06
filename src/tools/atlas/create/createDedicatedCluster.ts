@@ -12,8 +12,8 @@ const PROVIDER_DEFAULT_REGIONS = {
     GCP: "CENTRAL_US",
 } as const;
 
-export class CreatePaidClusterTool extends AtlasToolBase {
-    static toolName = "atlas-create-paid-cluster";
+export class CreateDedicatedClusterTool extends AtlasToolBase {
+    static toolName = "atlas-create-dedicated-cluster";
     public description =
         "Create a dedicated MongoDB Atlas cluster. Use this over atlas-create-free-cluster when a cluster greater than M0 is required, or when the workload requires guaranteed compute and memory, larger storage, backup support, or private networking.";
     static operationType: OperationType = "create";
